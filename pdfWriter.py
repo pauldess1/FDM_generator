@@ -19,7 +19,7 @@ class pdfWriter():
         font_size = 10
         i = 0
         for (player, nb_licence, is_pres) in zip(players, nb_licences, is_present):
-            if is_pres:
+            if is_pres and i<16:
                 x, y = 72, 243 + i * 25.5
                 page.insert_text((x, y), player, fontsize=font_size, fontname="helv", color=(0, 0, 0))
                 page.insert_text((x + 170, y), nb_licence, fontsize=font_size, fontname="helv", color=(0, 0, 0))
