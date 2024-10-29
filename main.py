@@ -1,9 +1,10 @@
 import tkinter as tk
-from tkinter import messagebox, ttk
+from tkinter import messagebox, ttk, filedialog
+import argparse
+
 from dataConstructor import DataConstructor
 from pdfWriter import pdfWriter
-from tkinter import filedialog, messagebox
-import argparse
+
 
 class MatchSheetApp:
     def __init__(self, root, original_FDM_path):
