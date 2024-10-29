@@ -1,0 +1,16 @@
+The Parisians Hawks
+Smith John;0382740;true
+Johnson Mike;0485273;true
+Doe Jane;0478364;true
+Taylor Frank;0482291;true
+Brown Alice;0483284;false
+Walker Chris;0487378;true
+Adams Theo;0482382;true
+Baker Sam;0502381;false
+Parker Charles;0481235;true
+Lee Martin;0487365;false
+Moore Emma;0485263;true
+Hill Jacob;0488390;true
+Lopez Luis;0496284;true
+Khan Amal;0184253;true
+Chang Lian;0509248;true

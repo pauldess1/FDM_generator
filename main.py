@@ -3,13 +3,14 @@ from tkinter import messagebox, ttk
 from dataConstructor import DataConstructor
 from pdfWriter import pdfWriter
 from tkinter import filedialog, messagebox
+import argparse
 
 class MatchSheetApp:
-    def __init__(self, root):
+    def __init__(self, root, original_FDM_path):
         self.root = root
         self.root.title("Match Sheet")
 
-        self.filename = 'infos.txt'
+        self.filename = original_FDM_path
         self.data = DataConstructor(self.filename)
         self.team, self.players, self.license_numbers, self.is_present = self.data.show_player()
 
@@ -80,6 +81,10 @@ class MatchSheetApp:
             messagebox.showerror("Error", f"An error occurred while updating the PDF: {str(e)}")
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Match Sheet Generator for FSGT")
+    parser.add_argument("--original_FDM_path",type=str, required=True, help='Path of the original Match Sheet you have to complete')
+    args = parser.parse_args()
+
     root = tk.Tk()
-    app = MatchSheetApp(root)
+    app = MatchSheetApp(root, args.original_FDM_path)
     root.mainloop()
